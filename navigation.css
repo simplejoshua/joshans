@@ -1,0 +1,205 @@
+* {
+    box-sizing: border-box;
+}
+
+body, html{
+    margin: 0;
+    overflow-x: hidden;
+    padding: 0;
+    background-color: whitesmoke;
+    
+}
+
+    /* START */
+
+    
+#open {
+    z-index: 300;
+    position: fixed;
+    width: 100%;
+    box-shadow: 8px 8px 8px -7px rgba(0,0,0,0.4);
+    background-color: rgba(0,0,0,.4);
+    transition: 0.5s;
+}
+#open {
+    float: left;
+    overflow: hidden;
+    height: 80px;
+    text-align: center;
+
+
+}
+
+.indexLogo {
+    z-index: 305;
+    position: fixed;
+    left: 35px;
+    top: 1px;
+    height: 140px;
+    width: auto;
+    transition: 0.5s;
+}
+
+
+
+
+
+
+
+#open .abra {
+    display: inline-block;
+    height: 100%;
+    padding: 25px 20px;
+    margin: 0px 10px;
+
+    color: whitesmoke;
+
+    text-align: center;
+    text-decoration: none;
+    font-family: "Roboto", Candara, sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    text-shadow: 2px 2px 2px 2px black;
+    transition: 0.5s;
+}
+
+.abra .abra:hover {
+    border-bottom-style: solid;
+    border-bottom-width: 3px;
+    border-color: whitesmoke;
+}
+
+#active.abra{
+    background-color: whitesmoke;
+    color: #6e6721;
+}
+
+
+
+.cookie {
+    position: fixed;
+    z-index: 303;
+    top: 0px;
+    right: 40px;
+    width: 150px;
+    transition: 0.5s;
+    visibility: visible;
+}
+.reachUs {
+    z-index: 302;
+    top: 0px;
+    right: 40px;
+    position: fixed;
+    width: 150px;
+    height: 125px;
+    opacity: 0%;
+    background-color: black;
+}
+
+.fb-nav {
+    height: 100%;
+    transition: 0.4s;
+}
+
+.IG-nav {
+    height: 100%;
+    transition: 0.4s;
+}
+
+.bars-nav {
+    height: 100%;
+    margin-left: 20px;
+    display: none;
+}
+
+.socMed {
+    z-index: 302;
+    position: fixed;
+    right: 80px;
+    top: 30px;
+    height: 30px;
+    transition: 0.5s;
+
+}
+
+.fullscreenNav {
+    z-index: 999;
+    width: 100vw;
+    height: 0%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #6e6721;
+    padding: 100px;
+    text-align: center;
+    visibility: hidden;
+    transition:  ease-in-out 0.4s;
+    font-family: 'Roboto', Candara, sans-serif;
+    font-weight: 500;
+
+
+}
+.fullscreenNav .resp{
+    width: 100%;
+    padding: 10px;
+    display: block;
+    position: relative;
+    text-decoration: none;
+    color: whitesmoke;
+
+}
+.fullscreenNav #active.resp{
+    color: rgb(252, 252, 86);
+}
+.x-nav {
+    position: absolute;
+    float: right;
+    width: 25px;
+    top: 30px;
+    right: 30px;
+}
+
+@media screen and (max-width: 960px) {
+
+    .indexLogo {
+        top: 35px;
+        height: 100px;
+        left: 10px
+    }
+    .body {
+        max-width: 50%;
+    }
+    .cookie, .reachUs {
+        display: none;
+    }
+
+    .bars-nav {
+        display: inline-block;
+        height: 100%;
+    }
+
+
+
+    #open {
+        width: 100%;
+        height: 80px;
+        background-color: rgba(0,0,0,.4);
+    }
+
+
+
+    #open .abra {
+        visibility: hidden;
+
+    }
+    .socMed {
+        right: 15px;
+        
+    }
+    
+
+}
+
+    /* END */

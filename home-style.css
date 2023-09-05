@@ -1,0 +1,463 @@
+br {
+    display: block;
+    margin: 0px 0;
+    padding: 0px 0;
+    content: " ";
+}
+
+
+    /* INTRODUCTIONAL SCREEN */
+
+
+div.pageIntro {
+    position: absolute;
+
+    background-image: url('img/home/introduction.jpg') ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    max-width: 100%;
+    width: 100vw;
+    height: 100vh;
+    z-index: 0;
+    text-align: center;
+}
+
+
+
+.introDiv {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    text-align: center;
+
+    
+}
+
+.introText {
+    font-weight: bold;
+    color: whitesmoke;
+    font-size: 80px;
+    font-family: "Dancing Script";
+}
+
+.subIntroButton {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    background-color:rgba(0, 0, 0, 0.1);
+
+    width: 150px;
+    border-style: solid;
+    border-radius: 2%;
+    border-color: whitesmoke;
+    border-width: 2px;
+
+    font-weight: bold;
+    font-family:  sans-serif;
+    text-align: center;
+    color: whitesmoke;
+    padding: 10px 10px;
+
+    transition: .4s;
+}
+
+.subIntroButton:hover {
+    color: rgba(0, 0, 0, 1);
+    background-color: whitesmoke;
+}
+
+
+span.blinking {
+    position: absolute;
+    left: 50%;
+    transform: translatex(-50%);
+    top: -80px;
+    animation:blinkingItem 2s infinite;
+}
+
+.blinking img {
+    width: 45px;
+}
+@-webkit-keyframes blinkingItem{
+    0%{opacity: 100%;}
+    30%{opacity: 100%;}
+    50%{opacity: 0%;}
+    70%{opacity: 100%;}
+    100%{opacity: 100%;}
+}
+@keyframes blinkingItem{
+    0%{opacity: 100%;}
+    30%{opacity: 100%;}
+    50%{opacity: 0%;}
+    70%{opacity: 100%;}
+    100%{opacity: 100%;}
+}
+@-moz-keyframes blinkingItem{
+    0%{opacity: 100%;}
+    30%{opacity: 100%;}
+    50%{opacity: 0%;}
+    70%{opacity: 100%;}
+    100%{opacity: 100%;}
+}
+
+
+
+#slidingDiv {
+    position: absolute;
+    background-color: whitesmoke;
+    top: 100vh;
+    z-index: 001;
+}
+
+    /* TOUR PANE */
+
+
+#tourPane {
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: .25%
+}
+
+div.tourImages {
+    font-family: "Roboto", Candara, sans-serif;
+    font-weight: 300;
+    font-size: x-large;
+    color: rgb(230, 230, 230);
+    text-align: center;
+
+    position: relative;
+    float: left;
+    width: 32.7%;
+    height: 100%;
+    background-color: black;
+    margin: .3%;
+}
+
+div.tourImages img {               /*  must have 16:9 ratio images  */
+    display: block;
+    width: 100%;
+    opacity: 100%;
+    object-fit: cover;
+    transition: 0.4s;
+
+}
+
+
+.tourName {
+    visibility: hidden;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 0s;
+}
+
+.tourImages img:hover + .tourName , .tourName:hover {
+    visibility: visible;
+}
+
+
+#tourPane:after {
+    clear: both;
+}
+#tourPane:after {
+    content: "";
+    display: table;
+}
+
+    /* MAIN HOME */
+
+
+#quoteContainer {
+    position: relative;
+    background-color: #5b4b49;
+    height: 300px;
+    z-index: 1;
+}
+
+div.column1 {
+    position: relative;
+    float: left;
+    width: 30%;
+    height: 300px;
+    background-color: #5b4b49;
+}
+
+div.column1 img {
+    position: absolute;
+    width: 300px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+      }
+
+
+
+div.column2 {
+    position: relative;
+    float: left;
+    width: 70%;
+    height: 300px;
+    background-color: #5b4b49;
+}
+
+.quote {
+    width: 100%;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+
+
+.quote h1 {
+
+    font-size: 60px;
+    color: whitesmoke;
+    text-align: left;
+    margin: 0px 0px;
+
+}
+
+.quote p {
+    margin: 0px 0px;
+    font-family: "Roboto", sans-serif, Candara;
+    text-align: left;
+    color: rgb(226, 226, 193);
+}
+
+
+#quoteContainer2 {
+    position: relative;
+    background-color: whitesmoke;
+    height: 300px;
+    z-index: 1;
+}
+
+div.column1-2 {
+    position: relative;
+    float: left;
+    width: 70%;
+    height: 300px;
+    background-color: whitesmoke;
+    
+}
+
+div.column2-2 img {
+    position: absolute;
+    width: 250px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+      }
+
+div.column2-2 {
+    position: relative;
+    float: left;
+    width: 30%;
+    height: 300px;
+    background-color: whitesmoke;
+}
+
+.quote-2 {
+    width: 100%;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.quote-2 h1 {
+
+    font-size: 60px;
+    color: #5b4b49;
+    text-align: right;
+    margin: 0px 0px;
+
+}
+
+.quote-2 p {
+    margin: 0px 0px;
+    font-family: "Roboto", sans-serif, Candara;
+    text-align: right;
+    color: rgb(29, 29, 29);
+}
+
+
+
+.aboutUs {
+    position: relative;
+    width: 100%;
+    background-color: whitesmoke;
+    height: 700px;
+
+    border-top: 7px dashed rgba(110,103,33,0.81);
+    border-bottom: 7px dashed rgba(110,103,33,0.81);
+}
+
+#aboutUs-header {
+    position: absolute;
+    width: 100%;
+    padding: 40px;
+    text-align: center;
+
+}
+
+#aboutUs-header h1 {
+    font-family: "Dancing Script";
+    text-align: center;
+    font-weight: 300;
+    font-size: 75px;
+    color: #484514;
+}
+
+@media screen and (max-width: 960px) {
+    .introDiv {
+        width: 90%;
+    }
+    .introText {
+        font-size: 60px;
+    }
+    .subIntroButton {
+        width: 120px;
+        font-size: medium;
+    }
+
+    span.blinking {
+        top: -70px;
+        
+    }
+    .blinking img {
+        width: 30px;
+    }
+
+    div.tourImages img {
+        opacity : 50%;
+    }
+    div.tourName {
+        visibility: visible;
+        font-size: 15px;
+    }
+
+    #quoteContainer {
+        height: 200px;
+    }
+
+    div.column1 {
+        height: 200px;
+    }
+    
+    div.column2 {
+
+        height: 200px;
+    }
+
+    .quote h1 {
+        font-size: 35px;
+    }
+    .quote p {
+        font-size: 13px;
+    }
+    div.column1 img {
+        width: 180px;
+    }
+
+
+    #quoteContainer2 {
+        height: 200px;
+    }
+    div.column1-2 {
+        height: 200px;
+    }
+    
+    div.column2-2 {
+
+        height: 200px;
+    }
+
+    .quote-2 h1 {
+        font-size: 35px;
+    }
+    .quote-2 p {
+        font-size: 13px;
+    }
+    div.column2-2 img {
+        width: 170px;
+    }
+
+}
+@media screen and (max-width: 480px) {
+
+    div.tourImages {
+        width : 100%;
+    }
+
+    #quoteContainer {
+        height: 325px;
+    }
+    div.column1 {
+        width: 100%;
+        height: 200px;
+    }
+    
+    div.column2 {
+        width: 100%;
+        height: 125px;
+    }
+    .quote h1 {
+
+        text-align: center;
+        width: 100%;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .quote p {
+        padding-left: 20px;
+        padding-right: 20px;
+        text-align: center;
+    }
+    div.column1 img {
+        width: 250px;
+    }
+
+
+    
+    #quoteContainer2 {
+        height: 325px;
+    }
+    div.column1-2 {
+        width: 100%;
+        height: 125px;
+    }
+    
+    div.column2-2 {
+        width: 100%;
+        height: 200px;
+    }
+    .quote-2 h1 {
+        padding-left: 20px;
+        padding-right: 20px;
+        text-align: center;
+        width: 100%;
+    }
+    .quote-2 p {
+        padding-left: 20px;
+        padding-right: 20px;
+        text-align: center;
+    }
+    div.column2-2 img {
+        width: 200px;
+    }
+    #aboutUs-header h1 {
+        font-size: 40px;
+    }
+}

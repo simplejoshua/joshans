@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html>
+    
+<head>
+    <title> Joshans - Gallery </title>
+
+    <link rel="shortcut icon" type="image/x-icon" href="img/joshann-icon.ico">  <!-- icon -->
+
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">  <!-- scaling -->
+
+    <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">  <!-- fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">   <!-- ICONS  -->
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    
+    <link rel="stylesheet" href="navigation.css">  <!-- stylesheets -->
+    <link rel="stylesheet" href="gallery-style.css">
+    <link rel="stylesheet" href="footer.css">
+    
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>  <!-- scripts used -->
+    <script src="plugins/jquery.scrollLock.js"></script>
+
+    <script>     
+        function resetResp() {
+            if (window.innerWidth > 960) {
+                $('.fullscreenNav').css({
+                    "visibility" : "hidden",
+                    "height" : "0%",    
+                })
+                $.scrollLock( false );
+                x = 'queen';
+                if (document.body.scrollTop > 40 || document.documentElement.scrollTop > 40) {
+                    for (i = 0; i < nav.length; i++) {
+                        nav[i].style.height = "40px";
+                    }
+                    
+                    $("#open .abra").css({
+                        "padding" : "10px 20px",
+                        "color": "#6e6721",
+                    })
+                    $(".indexLogo").css({
+                        "height" : "60px",
+                        "top" : "10px",
+                    })
+                    $(".reachUs").css({
+                        "width" : "150px",
+                        "height" : "125px",
+                        "top" : "-20px",
+                    })
+
+                    $("#open .abra").css({
+                        "border-color" : "#6e6721"
+                    })
+                    $("#active.abra").css({
+                        "background-color": "#6e6721",
+                        "color": "whitesmoke",
+                    })
+                    $("#open").css({
+                        "background-color" : "whitesmoke",
+                        "height" : "40px",
+                    })
+                    
+                    $(".fb-nav").css({
+                    "content" : "url(img/nav/fb-icon2.png)",
+                    })
+                    $(".IG-nav").css({
+                        "content" : "url(img/nav/IG-icon2.png)",
+                    })
+                    
+                }
+            } else {
+
+                if (document.body.scrollTop > 40 || document.documentElement.scrollTop > 40) {
+                    for (i = 0; i < nav.length; i++) {
+                        nav[i].style.height = "40px";
+                    }
+
+                    
+                    $("#open").css({
+                        "height" : "40px",
+                        "background-color" : "#6e6721",
+                    })
+
+                    $("#open .abra").css({
+                        "height" : "40px",
+                        "padding" : "10px 20px",
+                    })
+                    
+                    $(".indexLogo").css({
+                        "height" : "60px",
+                        "top" : "10px",
+                    })
+
+                    $(".fb-nav").css({
+                        "content" : "url(img/nav/fb-icon.png)",
+                    })
+                    $(".IG-nav").css({
+                        "content" : "url(img/nav/IG-icon.png)",
+                    })
+
+                }
+            }
+        }
+    </script>
+</head>
+
+
+<body onresize="resetResp()">
+
+
+<!-- RESPONSIVE NAV SCRIPTS -->
+
+<script>
+    var x = 'queen'
+    function navResponse(){
+        console.log ("MENUBARS IS CLICKED")
+        if (x == 'queen'){
+            $('.fullscreenNav').css({
+                "visibility" : "visible",
+                "height" : "100vh",
+            });
+            x = 'king';
+            $.scrollLock( true );
+        } else {
+            $('.fullscreenNav').css({
+                "visibility" : "hidden",
+                "height" : "100vh",
+            });
+
+            $.scrollLock( false );
+            x = 'queen';
+        }
+    }
+
+</script>
+
+
+
+<!-- NAVIGATION BAR -->    
+
+    <div class="abra" id ="open">
+        <a class="abra" href="index.html"> HOME </a>
+        <a class="abra" href="menu.html"> MENU </a>
+        <a class="abra" href="maintenance page.html"> CREATE </a>
+        <a class="abra" id="active" href="gallery.html"> GALLERY </a>
+    </div>
+
+
+    <a href="index"> <img class="indexLogo" src="img/nav/joshann-logo.png"> </a>
+
+
+    <img class="reachUs" src="img/nav/cookie-trigger.png">
+    <img class="cookie" src="img/nav/cookie1.png">
+    <div class="socMed">
+        <a href="https://www.facebook.com/JosHans-Cakes-and-Pastries-592866694400170/" target="_blank"><img class="fb-nav" src="img/nav/fb-icon.png"></a>
+        <a href="#"><img class="IG-nav" src="img/nav/IG-icon.png"></a>
+        <a href="javascript:" onclick="navResponse()"><img class="bars-nav" src="img/nav/bars-icon.png"></a>
+    </div>
+    <div class="fullscreenNav">
+        <a class="resp" href="index.html"> HOME </a>
+        <a class="resp" href="menu.html"> MENU </a>
+        <a class="resp" href="create.html"> CREATE </a>
+        <a class="resp" id="active" href="gallery.html"> GALLERY </a>
+        <a href="javascript:" onclick="navResponse()"><img class="x-nav" src="img/nav/x-button.png"></a>
+
+    </div>
+
+    
+
+
+
+<!-- NAVIGATION BAR SCRIPTS -->
+
+<script>
+
+
+
+
+    window.onscroll = function() {scrollFunction()};
+
+    var nav = document.getElementsByClassName(".abra");
+    var i;
+
+    
+    $('.cookie, .reachUs, .socMed').hover (
+        function() {
+
+            if (document.body.scrollTop > 40 || document.documentElement.scrollTop > 40) {
+                $(".cookie").css({
+                    "transform" : "rotate(-30deg)",
+                    "width" : "100",
+                    "top" : "-80px",
+                    "right" : "-120px",
+
+                })
+            } else {
+                $(".cookie").css({
+                "transform" : "rotate(-30deg)",
+                "width" : "150px",
+                "top" : "-90px",
+                "right" : "-130px",
+
+            })
+            }
+        }, function() {
+                if (document.body.scrollTop > 40 || document.documentElement.scrollTop > 40) {
+                    $(".cookie").css({
+                        "width" : "100px",
+                        "right" : "30px",
+                        "top" : "-20px",
+                        "transform" : "rotate(0deg)"
+                    })
+                } else {
+                    $(".cookie").css({
+                        "width" : "150px",
+                        "right" : "40px",
+                        "top" : "0px",
+                        "transform" : "rotate(0deg)",
+                    })
+                }
+            }
+    )
+
+    function scrollFunction() {
+
+        var cookieHovered = (($('.cookie').is(":hover")) || ($('.reachUs').is(":hover")) || ($('.socMed').is(':hover')));
+        var scWidth = window.innerWidth;
+
+        console.log('screen width:' + scWidth);
+
+        if (scWidth > 960){
+            if (document.body.scrollTop > 40 || document.documentElement.scrollTop > 40) {
+                for (i = 0; i < nav.length; i++) {
+                    nav[i].style.height = "40px";
+                }
+                
+                $("#open .abra").css({
+                    "padding" : "10px 20px",
+                    "color": "#6e6721",
+                    "height" : "40px",
+                })
+                $(".indexLogo").css({
+                    "height" : "80px",
+                    "top" : "-5px",
+                })
+                $(".reachUs").css({
+                    "width" : "90px",
+                    "height" : "70px",
+                    "right" : "35px",
+                })
+
+                $(".socMed").css({
+                    "right" : "45px",
+                    "top" : "5px",
+
+                })
+                $("#open .abra").css({
+                    "border-color" : "#6e6721"
+                })
+                $("#active.abra").css({
+                    "background-color": "#6e6721",
+                    "color": "whitesmoke",
+                })
+                $("#open").css({
+                    "background-color" : "whitesmoke",
+                    "height" : "40px",
+                })
+                
+                $(".fb-nav").css({
+                "content" : "url(img/nav/fb-icon2.png)",
+                })
+                $(".IG-nav").css({
+                    "content" : "url(img/nav/IG-icon2.png)",
+                })
+                
+
+                if (!(cookieHovered)) {
+                    $(".cookie").css({
+                        "width" : "100px",
+                        "right" : "30px",
+                        "top" : "-20px",
+                        "transform" : "rotate(0deg)"
+                    })
+                }
+            } else {
+                for (i = 0; i < nav.length; i++) {
+                    nav[i].style.height = "80px";
+                }
+                $("#open .abra").css({
+                    "padding" : "25px 20px",
+                    "height" : "80px",
+                })
+                $(".indexLogo").css({
+                    "height" : "140px",
+                    "top" : "1px",
+                })
+                $(".reachUs").css({
+                    "width" : "150px",
+                    "height" : "125px",
+                    "right" : "40px",
+                })
+                $(".socMed").css({
+                    "right" : "80px",
+                    "top" : "30px",
+                })
+
+                $("#open .abra").css({
+                    "color": "whitesmoke"
+                })
+                $("#open .abra").css({
+                    "border-color" : "whitesmoke"
+                })
+
+                $("#active").css({
+                    "background-color": "whitesmoke",
+                    "color": "#6e6721",
+                })
+
+
+                $(".fb-nav").css({
+                    "content" : "url(img/nav/fb-icon.png)",
+                })
+                $(".IG-nav").css({
+                    "content" : "url(img/nav/IG-icon.png)",
+                })
+                
+                $("#open").css({
+                    "background-color" : "rgba(0,0,0,.4)",
+                    "height" : "80px",
+                })
+                if (!(cookieHovered)) {
+                    $(".cookie").css({
+                        "width" : "150px",
+                        "right" : "40px",
+                        "top" : "0px",
+                        "transform" : "rotate(0deg)"
+                    })
+
+                }
+            }
+        } 
+        else {
+        
+            if (document.body.scrollTop > 40 || document.documentElement.scrollTop > 40) {
+                for (i = 0; i < nav.length; i++) {
+                    nav[i].style.height = "40px";
+                }
+
+                
+                $("#open").css({
+                    "height" : "40px",
+                    "background-color" : "#6e6721",
+                })
+
+                $("#open .abra").css({
+                    "height" : "40px",
+                    "padding" : "10px 20px",
+                })
+                
+                $(".indexLogo").css({
+                    "height" : "60px",
+                    "top" : "5px",
+                })
+
+                $(".socMed").css({
+                    "top" : "5px",
+                })
+                $(".fb-nav").css({
+                    "content" : "url(img/nav/fb-icon.png)",
+                })
+                $(".IG-nav").css({
+                    "content" : "url(img/nav/IG-icon.png)",
+                })
+
+            }   
+        
+     
+            else {
+                for (i = 0; i < nav.length; i++) {
+                    nav[i].style.height = "80px";
+                }
+                
+                $("#open .abra").css({
+                    "height" : "80px",
+                    "padding" : "25px 20px",
+                })
+                $("#open").css({
+                    "height" : "80px",
+                    "background-color" : "rgba(0,0,0,.4)",
+
+                    
+                })
+
+                $(".indexLogo").css({
+                    "height" : "100px",
+                    "top" : "35px",
+                })
+                $(".reachUs").css({
+                    "width" : "200px",
+                    "top" : "0px",
+                })
+                $(".socMed").css({
+                    "top" : "30px",
+                    
+                })
+
+                
+                $("#open").css({
+                    "background-color" : "rgba(0,0,0,.4)",
+                    "height" : "80px"
+                })
+
+                $(".fb-nav").css({
+                    "content" : "url(img/nav/fb-icon.png)",
+                })
+                $(".IG-nav").css({
+                    "content" : "url(img/nav/IG-icon.png)",
+                })
+
+            }
+
+        }
+    
+
+    }
+    
+
+</script>
+
+
+
+
+<!-- THE GALLERY INTRO -->
+
+
+<div class='pageIntro'>
+        <p class='introText'> Gallery </p>
+</div>
+
+<div class="divider1">
+</div>
+
+<div class="history" style="padding: 10px;">
+    <a class="history" href="index"> Home </a> / Gallery
+</div>
+
+<div class="divider2">
+</div>
+
+
+<!-- MAIN GALLERY -->
+<div id="wholeGalleryContainer">
+<div class="galleryCategories" id="cupcakeSectionTitle">Cupcakes</div>
+<div class='gallery-container cupcakes'>
+    <a class='gallery-link' href='img/gallery/gallery-cars-full.jpg'>
+      <div class='gallery-image' style="background-image: url(img/gallery/gallery-cars-thumb.jpg)">
+        <div class="gallery-caption">royal Icing chocolate cake with edible fondant flowers</div>
+      </div>
+    </a>
+    <a class='gallery-link' href='img/gallery/gallery-sunflower-full.jpg'>
+      <div class='gallery-image' style="background-image: url(img/gallery/gallery-sunflower-thumb.jpg)">
+        <div class="gallery-caption">moist chocolate cupcake with buttercream sunflower frosting</div>
+      </div>
+    </a>
+    <a class='gallery-link' href='img/gallery/gallery-chocostars-full.jpg'>
+      <div class='gallery-image' style="background-image: url(img/gallery/gallery-chocostars-thumb.jpg)">
+        <div class="gallery-caption">chocolate cake topped with Italian meringue frosting and candy stars</div>
+      </div>
+    </a>
+    <a class='gallery-link' href='img/gallery/gallery-chocosoldier-full.jpg'>
+      <div class='gallery-image' style="background-image: url(img/gallery/gallery-chocosoldier-thumb.jpg)">
+        <div class="gallery-caption">chocolate cupcake with a three-color swiss meringue icing</div>
+      </div>
+    </a>
+    <a class='gallery-link' href='img/gallery/gallery-chocoflower-full.jpg'>
+      <div class='gallery-image' style="background-image: url(img/gallery/gallery-chocoflower-thumb.jpg)">
+        <div class="gallery-caption">Photo caption</div>
+      </div>
+    </a>
+    <a class='gallery-link' href='img/gallery/gallery-redvelvet-full.jpg'>
+      <div class='gallery-image' style="background-image: url(img/gallery/gallery-redvelvet-thumb.jpg)">
+        <div class="gallery-caption">Photo caption</div>
+      </div>
+    </a>
+    <a class='gallery-link' href='img/gallery/gallery-chocobuttercream-full.jpg'>
+      <div class='gallery-image' style="background-image: url(img/gallery/gallery-chocobuttercream-thumb.jpg)">
+        <div class="gallery-caption">Photo caption</div>
+      </div>
+    </a>
+    <a class='gallery-link' href='img/gallery/gallery-weddingcupcake-full.jpg'>
+      <div class='gallery-image' style="background-image: url(img/gallery/gallery-weddingcupcake-thumb.jpg)">
+        <div class="gallery-caption">Photo caption</div>
+      </div>
+    </a>
+    <a class='gallery-link' href='img/gallery/gallery-chocomallowcupcake-full.jpg'>
+      <div class='gallery-image' style="background-image: url(img/gallery/gallery-chocomallowcupcake-thumb.jpg)">
+        <div class="gallery-caption">Photo caption</div>
+      </div>
+    </a>
+  </div>
+
+<div class="galleryCategories" id="cakeSectionTitle">Cakes</div>
+<div class='gallery-container cupcakes'>
+    <a class='gallery-link' href='img/gallery/gallery-bdaybasket-full.jpg'>
+      <div class='gallery-image' style="background-image: url(img/gallery/gallery-bdaybasket-thumb.jpg)">
+        <div class="gallery-caption">royal Icing chocolate cake with edible fondant flowers</div>
+      </div>
+    </a>
+    <a class='gallery-link' href='img/gallery/gallery-cakeboy-full.jpg'>
+      <div class='gallery-image' style="background-image: url(img/gallery/gallery-cakeboy-thumb.jpg)">
+        <div class="gallery-caption">moist chocolate cupcake with buttercream sunflower frosting</div>
+      </div>
+    </a>
+    <a class='gallery-link' href='img/gallery/gallery-valentine-full.jpg'>
+      <div class='gallery-image' style="background-image: url(img/gallery/gallery-valentine-thumb.jpg)">
+        <div class="gallery-caption">chocolate cake topped with Italian meringue frosting and candy stars</div>
+      </div>
+    </a>
+    <a class='gallery-link' href='img/gallery/gallery-wedding-full.jpg'>
+      <div class='gallery-image' style="background-image: url(img/gallery/gallery-wedding-thumb.jpg)">
+        <div class="gallery-caption">chocolate cupcake with a three-color swiss meringue icing</div>
+      </div>
+    </a>
+    <a class='gallery-link' href='img/gallery/gallery-captainamerica-full.jpg'>
+        <div class='gallery-image' style="background-image: url(img/gallery/gallery-captainamerica-thumb.jpg)">
+          <div class="gallery-caption">chocolate cupcake with a three-color swiss meringue icing</div>
+        </div>
+    </a>
+    <a class='gallery-link' href='img/gallery/gallery-beer-full.jpg'>
+        <div class='gallery-image' style="background-image: url(img/gallery/gallery-beer-thumb.jpg)">
+          <div class="gallery-caption">chocolate cupcake with a three-color swiss meringue icing</div>
+        </div>
+    </a>
+  </div>
+</div>
+
+
+<!-- FOOTER -->
+
+
+<div id='mainFooter'>
+    <div class="footer" id="leftColumn">
+
+    </div>
+    <div class='footer' id="middleColumn">
+        <h3> Customer Service </h3>
+            <a href="maintenance page.html" style="text-decoration: none;">Frequently Asked Questions</a><br>
+        <h3> Contact Us </h3>
+        <div>
+            <div class="contactUs">
+                <a href="https://www.messenger.com/t/JoshansCakes" target="_blank"><i style='font-size:24px' class='fab msg'>&#xf39f;</i>
+                <span class="contactUs-text"> &nbsp @JoshansCakes </span></a>
+            </div>
+            <div class="contactUs">
+                <a href = "mailto: abc@example.com"><i class="material-icons mail">&#xe0be;</i>
+                <span class="contactUs-text"> &nbsp joshans-info@gmail.com </span></a>
+            </div>
+        </div>
+
+    </div>
+    <div class="footer" id="rightColumn">
+        <h3> Keep In Touch </h3>
+            <a href="https://www.facebook.com/JoshansCakes" target="_blank"><i style='font-size:24px' class='fab fb'>&#xf082;</i></a>
+            <a href="https://www.facebook.com/JoshansCakes" target="_blank"><i style='font-size:24px' class='fab ig'>&#xf16d;</i></a>
+    </div>
+
+</div>
+<div id='deepEnd'>
+
+    Copyright ©  <?php echo date("Y");?> Joshan's Cakes & Pastries. All Rights Reserved
+
+</div>
+
+</div>
+
+
+
+
+</body>
+</html>

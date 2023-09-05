@@ -1,0 +1,189 @@
+
+
+#mainFooter {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 300px;
+    background-color: #5b4b49;
+    color: whitesmoke;
+    font-family: "Roboto", Candara, sans-serif;
+}
+
+#mainFooter * {
+    text-decoration: none;
+}
+.footer#middleColumn, .footer#rightColumn {
+    float: left;
+    height:100%;
+    width: 35%;
+    font-weight: 400;
+    padding-top: 20px;
+    padding-left: 50px;
+
+}
+.footer#leftColumn {
+    float: left;
+    padding-top: 20px;
+    padding-left: 40px;
+    padding-right: 10px;
+    width: 30%;
+    height: 100%;
+}
+.footer#middleColumn h3, .footer#rightColumn h3 {
+    line-height: 30px;
+    margin: 0px 0px;
+    padding-top: 25px;
+    padding-bottom: 10px;
+}
+.footer#middleColumn a {
+    color: whitesmoke;
+    padding-left: 20px;
+    font-weight: 400;
+}
+
+.footer#rightColumn a {
+    color: whitesmoke;
+    padding-left: 10px;
+    font-weight: 400;
+
+}
+
+.contactUs {
+    height: 30px;
+    vertical-align: middle;
+
+}
+.contactUs-text {
+    font-size: 12px;
+}
+
+.footer *{
+    transition: 0.2s;
+}
+.footer .msg:hover  {
+    color: #0084FF;
+}
+
+.footer .fb:hover {
+    color: #4267b2;
+}
+
+.footer .ig:hover {
+    color: #c32aa3;
+}
+
+.footer .mail:hover {
+    color: #a6b1b7;
+}
+
+
+
+
+#deepEnd {
+    position: relative;
+    line-height: 30px;
+    width: 100%;
+    height: 40px;
+    text-align: center;
+    vertical-align: middle;
+    background-color: whitesmoke;
+    color: black;
+    font-weight: 300;
+    font-family: "Roboto", Candara, sans-serif;
+    overflow: hidden;
+
+}
+
+
+
+
+
+
+
+
+@media screen and (max-width: 960px) {
+
+    .footer#leftColumn {
+        width: 100%;
+        height: 20%;
+    }
+
+    .footer#middleColumn {
+        width: 50%;
+        height: 80%;
+    }
+
+    .footer#rightColumn {
+        width: 50%;
+        height: 80%;
+    }
+
+    #mainFooter {
+        height: 400px;
+        font-size: 13px;
+        
+    }
+    .contactUs-icon {
+        width: 20px;
+    }
+    #deepEnd {
+        font-size: 13px;
+        height: 30px;
+    }
+
+
+
+    .footer#middleColumn, .footer#rightColumn {
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+
+    .footer#leftColumn{
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-bottom: 20px;
+        padding-top: 20px;
+        position: relative;
+        height: 20%;
+        width: 100%;
+    }
+    .footer#middleColumn{
+        padding-top: 10px;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-bottom: 20px;
+        width: 100%;
+        height: 40%;
+
+    
+    }
+
+    span.contactUs-text {
+        /* display: none; */
+    }
+    .footer#rightColumn{
+        padding-top: 10px;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-bottom: 20px;
+        position: relative;
+        width: 100%;
+        height: 40%;
+    }
+
+    #mainFooter {
+        height: 600px;
+        font-size: 12px;
+        
+    }
+
+    #deepEnd {
+        font-size: 12px;
+        height: 30px;
+    }
+}

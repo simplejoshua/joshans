@@ -1,0 +1,8 @@
+{
+    "appService.zipIgnorePattern": [
+        "node_modules{,/**}",
+        ".vscode{,/**}"
+    ],
+    "appService.deploySubpath": ".",
+    "appService.defaultWebAppToDeploy": "/subscriptions/5c77ec69-46fe-423c-98e9-bfa4dbf3212a/resourceGroups/JLD-resource/providers/Microsoft.Web/sites/joshans"
+}

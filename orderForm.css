@@ -1,0 +1,184 @@
+div#backdrop {
+  background-color: rgba(0, 0, 0, 0.687);
+  position: absolute;
+  width: 100vw;
+  height: 100%;
+  margin: 0px 0px;
+  padding: 0px 0px;
+  visibility: hidden;
+}
+
+.masterOrderForm {
+    outline-style: outset;
+    outline-width: 1.5px;
+    outline-color: rgb(123, 117, 109);
+    margin: 0 0 0 0;
+    position: absolute;
+    width: 700px;
+    height: 600px;
+    background-color: #5b4b49;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+
+    padding: 0px;
+    font-family: "Roboto", Candara, sans-serif;
+    color: #ebe49b;
+    background-color: #5b4b49;
+    z-index: 6;
+
+    visibility: hidden;
+  }
+
+.masterOrderForm div div {
+  padding: 10px;
+  height: 50px;
+  text-align: left;
+}
+
+label {
+  font-size: 14px;
+}
+h3.form {
+  width: 100%;
+  text-align: center;
+  font-family: "Dancing Script";
+  margin: 0px;
+  padding-top: 20px;
+  font-size: 30px;
+}
+
+
+.customerInfo-container {
+  height: 220px;
+}
+.firstName {
+  width: 30%;
+  float: left;
+}
+
+.lastName {
+  width: 25%;
+  float: left;
+}
+
+.companyName {
+  width: 45%;
+  float: left;
+}
+
+.mobileNumber {
+  width: 25%;
+  float: left;
+}
+
+.alternateContact {
+  width: 25%;
+  float: left;
+}
+
+#spacer1 {
+  width: 50%;
+  float: left;
+}
+
+.emailAddress {
+  width: 40%;
+  float: left;
+}
+
+.facebookName {
+  width: 40%;
+  float: left;
+}
+
+#spacer2 {
+  float: left;
+  width: 10%;
+}
+
+
+.orderType-container {
+  height: 100px;
+  color: #484514;
+  background-color: rgb(184, 163, 144);
+}
+
+.delivery {
+  text-align: center;
+  float: left;
+  width: 50%;
+}
+.pickupPoint {
+  text-align: center;
+  float: left;
+  width: 50%;
+}
+
+.deliveryInformation-container {
+  height: 150px;
+
+}
+
+.houseNo {
+  width: 35%;
+  float: left;
+}
+
+.brgy {
+  width: 45%;
+  float: left;
+}
+
+.city {
+  width: 20%;
+  float: left;
+}
+
+.deliveryDate {
+  width: 50%;
+  float: left;
+}
+.alternatePerson {
+  width: 50%;
+  float: left;
+}
+
+.pickupInformation-container {
+  height: 150px;
+  display: none;
+
+}
+
+.paymentMethod-container {
+  color: #484514;
+  background-color: rgb(184, 163, 144);
+  height: 100px;
+}
+.COD, .BDO {
+  width: 50%;
+  float: left;
+  text-align: center;
+}
+.submit-container {
+  height: 30px;
+  text-align: center;
+  background-color: #6e6721;
+  color: black;
+  font-weight: 1500px;
+}
+
+
+#close img {
+  width: 40px;
+  position: absolute;
+  top: -15px;
+  right: -15px;
+
+}
+span.errMsg {
+  font-size: 10px;
+  color: rgb(255, 92, 92);
+  margin: 0px 0px;
+  padding: 0px 0px;
+}
