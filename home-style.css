@@ -294,21 +294,23 @@ div.column2-2 {
 
 
 
-.aboutUs {
-    position: relative;
+div.aboutUs {
+    display: flex;
     width: 100%;
     background-color: whitesmoke;
-    height: 700px;
+    height: auto;
 
     border-top: 7px dashed rgba(110,103,33,0.81);
     border-bottom: 7px dashed rgba(110,103,33,0.81);
+
+    padding: 70px 200px 70px 200px;
 }
 
 #aboutUs-header {
-    position: absolute;
+    /* position: absolute; */
     width: 100%;
-    padding: 40px;
     text-align: center;
+    
 
 }
 
@@ -318,6 +320,19 @@ div.column2-2 {
     font-weight: 300;
     font-size: 75px;
     color: #484514;
+    margin: 0px 0px;
+    padding: 20px 20px;
+    
+}
+
+#aboutUs-header p {
+    margin: 0px 0px;
+    font-family: "Roboto", sans-serif, Candara;
+    text-align: justify;
+    color: rgb(29, 29, 29);
+    padding-left: 40px;
+    padding-right: 40px;
+    padding: 10px 10px;
 }
 
 @media screen and (max-width: 960px) {
@@ -394,6 +409,10 @@ div.column2-2 {
         width: 170px;
     }
 
+    div.aboutUs {
+        padding: 70px 100px 70px 100px;
+    }
+
 }
 @media screen and (max-width: 480px) {
 
@@ -457,6 +476,11 @@ div.column2-2 {
     div.column2-2 img {
         width: 200px;
     }
+
+    div.aboutUs {
+        padding: 70px 50px 70px 50px;
+    }
+
     #aboutUs-header h1 {
         font-size: 40px;
     }

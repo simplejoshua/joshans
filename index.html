@@ -1,642 +1,661 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <title>Joshan's - Home</title>
+    <link rel="shortcut icon" type="image/x-icon" href="img/joshann-icon.ico" />
+    <meta
+      charset="utf-8"
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
 
-<head>
-    <title> Joshan's - Home </title>
-    <link rel="shortcut icon" type="image/x-icon" href="img/joshann-icon.ico">
-    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- FONTS -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
 
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">   <!-- FONTS -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <!-- ICONS  -->
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">   <!-- ICONS  -->
-    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <link rel="stylesheet" href="home-style.css" />
+    <!-- STYLESHEETS -->
+    <link rel="stylesheet" href="navigation.css" />
+    <link rel="stylesheet" href="footer.css" />
 
-    <link rel="stylesheet" href="home-style.css">   <!-- STYLESHEETS -->
-    <link rel="stylesheet" href="navigation.css">
-    <link rel="stylesheet" href="footer.css">
-
-    <link rel="stylesheet" href="plugins/aos/aos.css">   <!-- PLUGINS  -->
+    <link rel="stylesheet" href="plugins/aos/aos.css" />
+    <!-- PLUGINS  -->
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
     <script src="plugins/jquery.scrollLock.js"></script>
 
-    <script>     
-        function resetResp() {
-            if (window.innerWidth > 960) {
-                $('.fullscreenNav').css({
-                    "visibility" : "hidden",
-                    "height" : "0%",    
-                })
-                $.scrollLock( false );
-                x = 'queen';
-                if (document.body.scrollTop > 40 || document.documentElement.scrollTop > 40) {
-                    for (i = 0; i < nav.length; i++) {
-                        nav[i].style.height = "40px";
-                    }
-                    
-                    $("#open .abra").css({
-                        "padding" : "10px 20px",
-                        "color": "#6e6721",
-                    })
-                    $(".indexLogo").css({
-                        "height" : "60px",
-                        "top" : "10px",
-                    })
-                    $(".reachUs").css({
-                        "width" : "150px",
-                        "height" : "125px",
-                        "top" : "-20px",
-                    })
-
-                    $("#open .abra").css({
-                        "border-color" : "#6e6721"
-                    })
-                    $("#active.abra").css({
-                        "background-color": "#6e6721",
-                        "color": "whitesmoke",
-                    })
-                    $("#open").css({
-                        "background-color" : "whitesmoke",
-                        "height" : "40px",
-                    })
-                    
-                    $(".fb-nav").css({
-                    "content" : "url(img/nav/fb-icon2.png)",
-                    })
-                    $(".IG-nav").css({
-                        "content" : "url(img/nav/IG-icon2.png)",
-                    })
-                    
-                }
-            } else {
-
-                if (document.body.scrollTop > 40 || document.documentElement.scrollTop > 40) {
-                    for (i = 0; i < nav.length; i++) {
-                        nav[i].style.height = "40px";
-                    }
-
-                    
-                    $("#open").css({
-                        "height" : "40px",
-                        "background-color" : "#6e6721",
-                    })
-
-                    $("#open .abra").css({
-                        "height" : "40px",
-                        "padding" : "10px 20px",
-                    })
-                    
-                    $(".indexLogo").css({
-                        "height" : "60px",
-                        "top" : "10px",
-                    })
-
-                    $(".fb-nav").css({
-                        "content" : "url(img/nav/fb-icon.png)",
-                    })
-                    $(".IG-nav").css({
-                        "content" : "url(img/nav/IG-icon.png)",
-                    })
-
-                }
+    <script>
+      function resetResp() {
+        if (window.innerWidth > 960) {
+          $(".fullscreenNav").css({
+            visibility: "hidden",
+            height: "0%",
+          });
+          $.scrollLock(false);
+          x = "queen";
+          if (
+            document.body.scrollTop > 40 ||
+            document.documentElement.scrollTop > 40
+          ) {
+            for (i = 0; i < nav.length; i++) {
+              nav[i].style.height = "40px";
             }
-        }
-    </script>
-</head>
 
-<body onresize="resetResp()">
-
-
-<!-- RESPONSIVE NAV SCRIPTS -->
-
-<script>
-    var x = 'queen'
-    function navResponse(){
-        console.log ("MENUBARS IS CLICKED")
-        if (x == 'queen'){
-            $('.fullscreenNav').css({
-                "visibility" : "visible",
-                "height" : "100vh",
+            $("#open .abra").css({
+              padding: "10px 20px",
+              color: "#6e6721",
             });
-            x = 'king';
-            $.scrollLock( true );
+            $(".indexLogo").css({
+              height: "60px",
+              top: "10px",
+            });
+            $(".reachUs").css({
+              width: "150px",
+              height: "125px",
+              top: "-20px",
+            });
+
+            $("#open .abra").css({
+              "border-color": "#6e6721",
+            });
+            $("#active.abra").css({
+              "background-color": "#6e6721",
+              color: "whitesmoke",
+            });
+            $("#open").css({
+              "background-color": "whitesmoke",
+              height: "40px",
+            });
+
+            $(".fb-nav").css({
+              content: "url(img/nav/fb-icon2.png)",
+            });
+            $(".IG-nav").css({
+              content: "url(img/nav/IG-icon2.png)",
+            });
+          }
         } else {
-            $('.fullscreenNav').css({
-                "visibility" : "hidden",
-                "height" : "100vh",
+          if (
+            document.body.scrollTop > 40 ||
+            document.documentElement.scrollTop > 40
+          ) {
+            for (i = 0; i < nav.length; i++) {
+              nav[i].style.height = "40px";
+            }
+
+            $("#open").css({
+              height: "40px",
+              "background-color": "#6e6721",
             });
 
-            $.scrollLock( false );
-            x = 'queen';
+            $("#open .abra").css({
+              height: "40px",
+              padding: "10px 20px",
+            });
+
+            $(".indexLogo").css({
+              height: "60px",
+              top: "10px",
+            });
+
+            $(".fb-nav").css({
+              content: "url(img/nav/fb-icon.png)",
+            });
+            $(".IG-nav").css({
+              content: "url(img/nav/IG-icon.png)",
+            });
+          }
         }
-    }
+      }
+    </script>
+  </head>
 
-</script>
+  <body onresize="resetResp()">
+    <!-- RESPONSIVE NAV SCRIPTS -->
 
+    <script>
+      var x = "queen";
+      function navResponse() {
+        console.log("MENUBARS IS CLICKED");
+        if (x == "queen") {
+          $(".fullscreenNav").css({
+            visibility: "visible",
+            height: "100vh",
+          });
+          x = "king";
+          $.scrollLock(true);
+        } else {
+          $(".fullscreenNav").css({
+            visibility: "hidden",
+            height: "100vh",
+          });
 
+          $.scrollLock(false);
+          x = "queen";
+        }
+      }
+    </script>
 
-<!-- NAVIGATION BAR -->    
+    <!-- NAVIGATION BAR -->
 
-    <div class="abra" id ="open">
-        <a class="abra" id="active" href="index.html"> HOME </a>
-        <a class="abra" href="menu.html"> MENU </a>
-        <a class="abra" href="maintenance page.html"> CREATE </a>
-        <a class="abra" href="gallery.html"> GALLERY </a>
+    <div class="abra" id="open">
+      <a class="abra" id="active" href="index.html"> HOME </a>
+      <a class="abra" href="menu.html"> MENU </a>
+      <a class="abra" href="create.html"> CREATE </a>
+      <a class="abra" href="gallery.html"> GALLERY </a>
     </div>
 
-
-    <a href="index"> <img class="indexLogo" src="img/nav/joshann-logo.png"> </a>
-
+    <a href="index">
+      <img class="indexLogo" src="img/nav/joshann-logo.png" />
+    </a>
 
     <div class="reachUs"></div>
-    <img class="cookie" src="img/nav/cookie1.png">
+    <img class="cookie" src="img/nav/cookie1.png" />
     <div class="socMed">
-        <a href="https://www.facebook.com/JosHans-Cakes-and-Pastries-592866694400170/" target="_blank"><img class="fb-nav" src="img/nav/fb-icon.png"></a>
-        <a href="#"><img class="IG-nav" src="img/nav/IG-icon.png"></a>
-        <a href="javascript:" onclick="navResponse()"><img class="bars-nav" src="img/nav/bars-icon.png"></a>
+      <a
+        href="https://www.facebook.com/JosHans-Cakes-and-Pastries-592866694400170/"
+        target="_blank"
+        ><img class="fb-nav" src="img/nav/fb-icon.png"
+      /></a>
+      <a href="#"><img class="IG-nav" src="img/nav/IG-icon.png" /></a>
+      <a href="javascript:" onclick="navResponse()"
+        ><img class="bars-nav" src="img/nav/bars-icon.png"
+      /></a>
     </div>
     <div class="fullscreenNav">
-        <a class="resp" id="active" href="index.html"> HOME </a>
-        <a class="resp" href="menu.html"> MENU </a>
-        <a class="resp" href="maintenance page.html"> CREATE </a>
-        <a class="resp" href="gallery.html"> GALLERY </a>
-        <a href="javascript:" onclick="navResponse()"><img class="x-nav" src="img/nav/x-button.png"></a>
-
+      <a class="resp" id="active" href="index.html"> HOME </a>
+      <a class="resp" href="menu.html"> MENU </a>
+      <a class="resp" href="maintenance page.html"> CREATE </a>
+      <a class="resp" href="gallery.html"> GALLERY </a>
+      <a href="javascript:" onclick="navResponse()"
+        ><img class="x-nav" src="img/nav/x-button.png"
+      /></a>
     </div>
 
-    
+    <!-- NAVIGATION BAR SCRIPTS -->
 
+    <script>
+      window.onscroll = function () {
+        scrollFunction();
+      };
 
+      var nav = document.getElementsByClassName(".abra");
+      var i;
 
-<!-- NAVIGATION BAR SCRIPTS -->
+      $(".cookie, .reachUs, .socMed").hover(
+        function () {
+          if (
+            document.body.scrollTop > 40 ||
+            document.documentElement.scrollTop > 40
+          ) {
+            $(".cookie").css({
+              transform: "rotate(-30deg)",
+              width: "100",
+              top: "-80px",
+              right: "-120px",
+            });
+          } else {
+            $(".cookie").css({
+              transform: "rotate(-30deg)",
+              width: "150px",
+              top: "-90px",
+              right: "-130px",
+            });
+          }
+        },
+        function () {
+          if (
+            document.body.scrollTop > 40 ||
+            document.documentElement.scrollTop > 40
+          ) {
+            $(".cookie").css({
+              width: "100px",
+              right: "30px",
+              top: "-20px",
+              transform: "rotate(0deg)",
+            });
+          } else {
+            $(".cookie").css({
+              width: "150px",
+              right: "40px",
+              top: "0px",
+              transform: "rotate(0deg)",
+            });
+          }
+        }
+      );
 
-<script>
-
-
-
-
-    window.onscroll = function() {scrollFunction()};
-
-    var nav = document.getElementsByClassName(".abra");
-    var i;
-
-    
-    $('.cookie, .reachUs, .socMed').hover (
-        function() {
-
-            if (document.body.scrollTop > 40 || document.documentElement.scrollTop > 40) {
-                $(".cookie").css({
-                    "transform" : "rotate(-30deg)",
-                    "width" : "100",
-                    "top" : "-80px",
-                    "right" : "-120px",
-
-                })
-            } else {
-                $(".cookie").css({
-                "transform" : "rotate(-30deg)",
-                "width" : "150px",
-                "top" : "-90px",
-                "right" : "-130px",
-
-            })
-            }
-        }, function() {
-                if (document.body.scrollTop > 40 || document.documentElement.scrollTop > 40) {
-                    $(".cookie").css({
-                        "width" : "100px",
-                        "right" : "30px",
-                        "top" : "-20px",
-                        "transform" : "rotate(0deg)"
-                    })
-                } else {
-                    $(".cookie").css({
-                        "width" : "150px",
-                        "right" : "40px",
-                        "top" : "0px",
-                        "transform" : "rotate(0deg)",
-                    })
-                }
-            }
-    )
-
-    function scrollFunction() {
-
-        var cookieHovered = (($('.cookie').is(":hover")) || ($('.reachUs').is(":hover")) || ($('.socMed').is(':hover')));
+      function scrollFunction() {
+        var cookieHovered =
+          $(".cookie").is(":hover") ||
+          $(".reachUs").is(":hover") ||
+          $(".socMed").is(":hover");
         var scWidth = window.innerWidth;
 
-        console.log('screen width:' + scWidth);
+        console.log("screen width:" + scWidth);
 
-        if (scWidth > 960){
-            if (document.body.scrollTop > 40 || document.documentElement.scrollTop > 40) {
-                for (i = 0; i < nav.length; i++) {
-                    nav[i].style.height = "40px";
-                }
-                
-                $("#open .abra").css({
-                    "padding" : "10px 20px",
-                    "color": "#6e6721",
-                    "height" : "40px",
-                })
-                $(".indexLogo").css({
-                    "height" : "80px",
-                    "top" : "-5px",
-                })
-                $(".reachUs").css({
-                    "width" : "90px",
-                    "height" : "70px",
-                    "right" : "35px",
-                })
-
-                $(".socMed").css({
-                    "right" : "45px",
-                    "top" : "5px",
-
-                })
-                $("#open .abra").css({
-                    "border-color" : "#6e6721"
-                })
-                $("#active.abra").css({
-                    "background-color": "#6e6721",
-                    "color": "whitesmoke",
-                })
-                $("#open").css({
-                    "background-color" : "whitesmoke",
-                    "height" : "40px",
-                })
-                
-                $(".fb-nav").css({
-                "content" : "url(img/nav/fb-icon2.png)",
-                })
-                $(".IG-nav").css({
-                    "content" : "url(img/nav/IG-icon2.png)",
-                })
-                
-
-                if (!(cookieHovered)) {
-                    $(".cookie").css({
-                        "width" : "100px",
-                        "right" : "30px",
-                        "top" : "-20px",
-                        "transform" : "rotate(0deg)"
-                    })
-                }
-            } else {
-                for (i = 0; i < nav.length; i++) {
-                    nav[i].style.height = "80px";
-                }
-                $("#open .abra").css({
-                    "padding" : "25px 20px",
-                    "height" : "80px",
-                })
-                $(".indexLogo").css({
-                    "height" : "140px",
-                    "top" : "1px",
-                })
-                $(".reachUs").css({
-                    "width" : "150px",
-                    "height" : "125px",
-                    "right" : "40px",
-                })
-                $(".socMed").css({
-                    "right" : "80px",
-                    "top" : "30px",
-                })
-
-                $("#open .abra").css({
-                    "color": "whitesmoke"
-                })
-                $("#open .abra").css({
-                    "border-color" : "whitesmoke"
-                })
-
-                $("#active").css({
-                    "background-color": "whitesmoke",
-                    "color": "#6e6721",
-                })
-
-
-                $(".fb-nav").css({
-                    "content" : "url(img/nav/fb-icon.png)",
-                })
-                $(".IG-nav").css({
-                    "content" : "url(img/nav/IG-icon.png)",
-                })
-                
-                $("#open").css({
-                    "background-color" : "rgba(0,0,0,.4)",
-                    "height" : "80px",
-                })
-                if (!(cookieHovered)) {
-                    $(".cookie").css({
-                        "width" : "150px",
-                        "right" : "40px",
-                        "top" : "0px",
-                        "transform" : "rotate(0deg)"
-                    })
-
-                }
-            }
-        } 
-        else {
-        
-            if (document.body.scrollTop > 40 || document.documentElement.scrollTop > 40) {
-                for (i = 0; i < nav.length; i++) {
-                    nav[i].style.height = "40px";
-                }
-
-                
-                $("#open").css({
-                    "height" : "40px",
-                    "background-color" : "#6e6721",
-                })
-
-                $("#open .abra").css({
-                    "height" : "40px",
-                    "padding" : "10px 20px",
-                })
-                
-                $(".indexLogo").css({
-                    "height" : "60px",
-                    "top" : "5px",
-                })
-
-                $(".socMed").css({
-                    "top" : "5px",
-                })
-                $(".fb-nav").css({
-                    "content" : "url(img/nav/fb-icon.png)",
-                })
-                $(".IG-nav").css({
-                    "content" : "url(img/nav/IG-icon.png)",
-                })
-
-            }   
-        
-     
-            else {
-                for (i = 0; i < nav.length; i++) {
-                    nav[i].style.height = "80px";
-                }
-                
-                $("#open .abra").css({
-                    "height" : "80px",
-                    "padding" : "25px 20px",
-                })
-                $("#open").css({
-                    "height" : "80px",
-                    "background-color" : "rgba(0,0,0,.4)",
-
-                    
-                })
-
-                $(".indexLogo").css({
-                    "height" : "100px",
-                    "top" : "35px",
-                })
-                $(".reachUs").css({
-                    "width" : "200px",
-                    "top" : "0px",
-                })
-                $(".socMed").css({
-                    "top" : "30px",
-                    
-                })
-
-                
-                $("#open").css({
-                    "background-color" : "rgba(0,0,0,.4)",
-                    "height" : "80px"
-                })
-
-                $(".fb-nav").css({
-                    "content" : "url(img/nav/fb-icon.png)",
-                })
-                $(".IG-nav").css({
-                    "content" : "url(img/nav/IG-icon.png)",
-                })
-
+        if (scWidth > 960) {
+          if (
+            document.body.scrollTop > 40 ||
+            document.documentElement.scrollTop > 40
+          ) {
+            for (i = 0; i < nav.length; i++) {
+              nav[i].style.height = "40px";
             }
 
+            $("#open .abra").css({
+              padding: "10px 20px",
+              color: "#6e6721",
+              height: "40px",
+            });
+            $(".indexLogo").css({
+              height: "80px",
+              top: "-5px",
+            });
+            $(".reachUs").css({
+              width: "90px",
+              height: "70px",
+              right: "35px",
+            });
+
+            $(".socMed").css({
+              right: "45px",
+              top: "5px",
+            });
+            $("#open .abra").css({
+              "border-color": "#6e6721",
+            });
+            $("#active.abra").css({
+              "background-color": "#6e6721",
+              color: "whitesmoke",
+            });
+            $("#open").css({
+              "background-color": "whitesmoke",
+              height: "40px",
+            });
+
+            $(".fb-nav").css({
+              content: "url(img/nav/fb-icon2.png)",
+            });
+            $(".IG-nav").css({
+              content: "url(img/nav/IG-icon2.png)",
+            });
+
+            if (!cookieHovered) {
+              $(".cookie").css({
+                width: "100px",
+                right: "30px",
+                top: "-20px",
+                transform: "rotate(0deg)",
+              });
+            }
+          } else {
+            for (i = 0; i < nav.length; i++) {
+              nav[i].style.height = "80px";
+            }
+            $("#open .abra").css({
+              padding: "25px 20px",
+              height: "80px",
+            });
+            $(".indexLogo").css({
+              height: "140px",
+              top: "1px",
+            });
+            $(".reachUs").css({
+              width: "150px",
+              height: "125px",
+              right: "40px",
+            });
+            $(".socMed").css({
+              right: "80px",
+              top: "30px",
+            });
+
+            $("#open .abra").css({
+              color: "whitesmoke",
+            });
+            $("#open .abra").css({
+              "border-color": "whitesmoke",
+            });
+
+            $("#active").css({
+              "background-color": "whitesmoke",
+              color: "#6e6721",
+            });
+
+            $(".fb-nav").css({
+              content: "url(img/nav/fb-icon.png)",
+            });
+            $(".IG-nav").css({
+              content: "url(img/nav/IG-icon.png)",
+            });
+
+            $("#open").css({
+              "background-color": "rgba(0,0,0,.4)",
+              height: "80px",
+            });
+            if (!cookieHovered) {
+              $(".cookie").css({
+                width: "150px",
+                right: "40px",
+                top: "0px",
+                transform: "rotate(0deg)",
+              });
+            }
+          }
+        } else {
+          if (
+            document.body.scrollTop > 40 ||
+            document.documentElement.scrollTop > 40
+          ) {
+            for (i = 0; i < nav.length; i++) {
+              nav[i].style.height = "40px";
+            }
+
+            $("#open").css({
+              height: "40px",
+              "background-color": "#6e6721",
+            });
+
+            $("#open .abra").css({
+              height: "40px",
+              padding: "10px 20px",
+            });
+
+            $(".indexLogo").css({
+              height: "60px",
+              top: "5px",
+            });
+
+            $(".socMed").css({
+              top: "5px",
+            });
+            $(".fb-nav").css({
+              content: "url(img/nav/fb-icon.png)",
+            });
+            $(".IG-nav").css({
+              content: "url(img/nav/IG-icon.png)",
+            });
+          } else {
+            for (i = 0; i < nav.length; i++) {
+              nav[i].style.height = "80px";
+            }
+
+            $("#open .abra").css({
+              height: "80px",
+              padding: "25px 20px",
+            });
+            $("#open").css({
+              height: "80px",
+              "background-color": "rgba(0,0,0,.4)",
+            });
+
+            $(".indexLogo").css({
+              height: "100px",
+              top: "35px",
+            });
+            $(".reachUs").css({
+              width: "200px",
+              top: "0px",
+            });
+            $(".socMed").css({
+              top: "30px",
+            });
+
+            $("#open").css({
+              "background-color": "rgba(0,0,0,.4)",
+              height: "80px",
+            });
+
+            $(".fb-nav").css({
+              content: "url(img/nav/fb-icon.png)",
+            });
+            $(".IG-nav").css({
+              content: "url(img/nav/IG-icon.png)",
+            });
+          }
         }
-    
+      }
+    </script>
 
-    }
-    
+    <!-- MAIN BODY -->
 
-</script>
-
-
-<!-- MAIN BODY -->
-    
-
-    <div class='pageIntro'>
-            <div class="introDiv">
-                <p class='introText' class="animated" data-aos="zoom-out"> You deserve it. </p>
-                <a href="menu" style="text-decoration : none"> 
-                    <div class='subIntroButton animated'> 
-                        check treats 
-                    </div>
-                </a>
-            </div>
+    <div class="pageIntro">
+      <div class="introDiv">
+        <p class="introText" class="animated" data-aos="zoom-out">
+          You deserve it.
+        </p>
+        <a href="menu" style="text-decoration: none">
+          <div class="subIntroButton animated">check treats</div>
+        </a>
+      </div>
     </div>
-  
-<div id="slidingDiv">
-    <span class="blinking"><a href="javascript:"><img src="img/arrow-down.png"></a></span>
 
-    <div id="tourPane">
+    <div id="slidingDiv">
+      <span class="blinking"
+        ><a href="javascript:"><img src="img/arrow-down.png" /></a
+      ></span>
+
+      <div id="tourPane">
         <a href="gallery.html#cupcakeSectionTitle">
-            <div class="tourImages">
-                <img class="theImage img1" src="img/home/cars-cupcake.jpg"> <div class="tourName nme1">CUPCAKES</div>   <!-- must have 16:9 ratio images -->
-            </div>
+          <div class="tourImages">
+            <img class="theImage img1" src="img/home/cars-cupcake.jpg" />
+            <div class="tourName nme1">CUPCAKES</div>
+            <!-- must have 16:9 ratio images -->
+          </div>
         </a>
         <a href="gallery.html">
-            <div class="tourImages">
-                <img class="theImage img2" src="img/home/winter-cake.jpg"> <div class="tourName nme2">CAKES</div>
-            </div>
+          <div class="tourImages">
+            <img class="theImage img2" src="img/home/winter-cake.jpg" />
+            <div class="tourName nme2">CAKES</div>
+          </div>
         </a>
         <a href="create.html">
-            <div class="tourImages">
-                <img class="theImage img3" src="img/home/DIY-cakes.jpg"> <div class="tourName nme3">MAKE YOUR OWN CUPCAKE</div>
-            </div>
+          <div class="tourImages">
+            <img class="theImage img3" src="img/home/DIY-cakes.jpg" />
+            <div class="tourName nme3">MAKE YOUR OWN CUPCAKE</div>
+          </div>
         </a>
-    </div>
-    <script>
-        $(document).ready(function(){
-            $(".blinking").click(function(){
-              $("html, body").animate({ scrollTop: $('#slidingDiv').position().top}, 1250);
+      </div>
+      <script>
+        $(document).ready(function () {
+          $(".blinking").click(function () {
+            $("html, body").animate(
+              { scrollTop: $("#slidingDiv").position().top },
+              1250
+            );
+          });
+        });
+      </script>
+
+      <div id="quoteContainer">
+        <div class="animated" data-aos="fade-in">
+          <div class="column1">
+            <img src="img/home/redVelvet-slice.png" />
+          </div>
+        </div>
+        <div class="animated" data-aos="fade-in">
+          <div class="column2">
+            <div class="quote">
+              <h1 style="font-family: Dancing Script">
+                Have cakes delivered at your doorstep.
+              </h1>
+              <p>
+                Joshan's offers delivery within Carmona, Biñan, Santa Rosa & San
+                Pedro area.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="quoteContainer2">
+        <div class="animated" data-aos="fade-in">
+          <div class="column1-2">
+            <div class="quote-2">
+              <h1 style="font-family: Dancing Script">
+                You make it, we bake it.
+              </h1>
+              <p>Create your own cupcakes through Joshan's Create. (Soon)</p>
+            </div>
+          </div>
+        </div>
+        <div class="animated" data-aos="fade-in">
+          <div class="column2-2">
+            <img src="img/home/pink-cupcake.png" />
+          </div>
+        </div>
+      </div>
+
+      <div id="quoteContainer">
+        <div class="animated" data-aos="fade-in">
+          <div class="column1">
+            <img src="img/home/occasion-cake.png" />
+          </div>
+        </div>
+        <div class="animated" data-aos="fade-in">
+          <div class="column2">
+            <div class="quote">
+              <h1 style="font-family: Dancing Script">
+                Celebrate with Joshan's custom cake.
+              </h1>
+              <p>
+                Celebrations are more fun with cakes customized for your
+                occassion.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="aboutUs">
+        <div id="aboutUs-header">
+          <h1>About Us</h1>
+
+          <p>
+            Founded in 2018, in the heart of Carmona, Cavite, Joshan's Cakes and
+            Pastries is a labor of love brought to life by our passion for
+            creating delectable, artful confections. We are a humble thriving
+            bakery known for crafting custom concept cakes and pastries that
+            turn your special moments into unforgettable memories. At Joshan's,
+            we believe that every celebration deserves a touch of sweetness and
+            creativity.
+          </p>
+          <p>You deserve it!</p>
+        </div>
+      </div>
+
+      <!-- TOUR PANE SCRIPTS -->
+
+      <script>
+        $(document).ready(function () {
+          if (window.innerWidth > 960) {
+            $(".nme1").hover(function () {
+              $(".img1").css("opacity", "30%");
             });
+
+            $(".nme2").hover(function () {
+              $(".img2").css("opacity", "30%");
+            });
+
+            $(".nme3").hover(function () {
+              $(".img3").css("opacity", "30%");
+            });
+
+            $(".img1").hover(
+              function () {
+                $(".img1").css("opacity", "30%");
+              },
+              function () {
+                $(".img1").css("opacity", "100%");
+              }
+            );
+
+            $(".img2").hover(
+              function () {
+                $(".img2").css("opacity", "30%");
+              },
+              function () {
+                $(".img2").css("opacity", "100%");
+              }
+            );
+
+            $(".img3").hover(
+              function () {
+                $(".img3").css("opacity", "30%");
+              },
+              function () {
+                $(".img3").css("opacity", "100%");
+              }
+            );
+          }
         });
-    
-    </script>
+      </script>
 
-    <div id="quoteContainer">
-        <div class="animated" data-aos="fade-in">
-            <div class="column1">
-                <img  src="img/home/redVelvet-slice.png">
-            </div>
-        </div>
-        <div class="animated" data-aos="fade-in">
-        <div class="column2 ">
-            
-                <div class= "quote">
-                    <h1   style="font-family:  Dancing Script;">Have cakes delivered at your doorstep.</h1>
-                    <p >Joshan's offers delivery within Carmona, Biñan, Santa Rosa & San Pedro area.</p>
-                </div>
-            </div>
-        </div>
-    </div>
+      <!-- ANIMATION SCRIPTS -->
 
-    <div id="quoteContainer2">
-        <div class="animated" data-aos="fade-in">
-        <div class="column1-2">
-            
-                <div class= "quote-2">
-                    <h1   style="font-family:  Dancing Script;">You make it, we bake it.</h1>
-                    <p >Create your own cupcakes through Joshan's Create. (Soon)</p>
-                </div>
-            </div>
-        </div>
-        <div class="animated" data-aos="fade-in">
-        <div class="column2-2 ">
-            
-                <img  src="img/home/pink-cupcake.png">
-            </div>
-        </div>
-    </div>
-
-    <div id="quoteContainer">
-        <div class="animated" data-aos="fade-in">
-        <div class="column1">
-           
-                <img  src="img/home/occasion-cake.png">
-            </div>
-        </div>
-        <div class="animated" data-aos="fade-in">
-        <div class="column2 ">
-            
-                <div class= "quote">
-                    <h1   style="font-family:  Dancing Script;">Celebrate with Joshan's custom cake.</h1>
-                    <p >Celebrations are more fun with cakes customized for your occassion.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="aboutUs">
-        <div id="aboutUs-header" >
-            <h1> About Us </h1>
-        </div>
-    </div>
-
-<!-- TOUR PANE SCRIPTS -->
-
-    <script>
-    $(document).ready(function(){
-        if (window.innerWidth > 960) {
-        
-
-            $(".nme1").hover(function(){
-                $(".img1").css("opacity" , "30%",)}
-            )
-
-            $(".nme2").hover(function(){
-                $(".img2").css("opacity" , "30%",)} , 
-            )
-
-            $(".nme3").hover(function(){
-                $(".img3").css("opacity" , "30%",)} , 
-            )
-
-            $(".img1").hover(function(){
-                $(".img1").css("opacity" , "30%",)} , 
-                function(){
-                $(".img1").css("opacity" , "100%",)}
-            )
-
-            $(".img2").hover(function(){
-                $(".img2").css("opacity" , "30%",)} , 
-                function(){
-                $(".img2").css("opacity" , "100%",)}
-            )
-
-            $(".img3").hover(function(){
-                $(".img3").css("opacity" , "30%",)} , 
-                function(){
-                $(".img3").css("opacity" , "100%",)}
-            )
-        
-        }
-    });
-    
-    </script>
-
-
-
-
-
-
-
-
-
-
-
-<!-- ANIMATION SCRIPTS -->
-
-
-    <script src="plugins/aos/aos.js"></script>
-    <script type="text/javascript">
+      <script src="plugins/aos/aos.js"></script>
+      <script type="text/javascript">
         AOS.init({
-            startEvent: "load",
-            duration: 1500,
+          startEvent: "load",
+          duration: 1500,
         });
-    </script>
+      </script>
 
+      <!-- FOOTER -->
 
-
-<!-- FOOTER -->
-
-
-<div id='mainFooter'>
-    <div class="footer" id="leftColumn">
-
-    </div>
-    <div class='footer' id="middleColumn">
-        <h3> Customer Service </h3>
-            <a href="maintenance page.html" style="text-decoration: none;">Frequently Asked Questions</a><br>
-        <h3> Contact Us </h3>
-        <div>
+      <div id="mainFooter">
+        <div class="footer" id="leftColumn"></div>
+        <div class="footer" id="middleColumn">
+          <h3>Customer Service</h3>
+          <a href="maintenance page.html" style="text-decoration: none"
+            >Frequently Asked Questions</a
+          ><br />
+          <h3>Contact Us</h3>
+          <div>
             <div class="contactUs">
-                <a href="https://www.messenger.com/t/JoshansCakes" target="_blank"><i style='font-size:24px' class='fab msg'>&#xf39f;</i>
-                <span class="contactUs-text"> &nbsp @JoshansCakes </span></a>
+              <a href="https://www.messenger.com/t/JoshansCakes" target="_blank"
+                ><i style="font-size: 24px" class="fab msg">&#xf39f;</i>
+                <span class="contactUs-text"> &nbsp @JoshansCakes </span></a
+              >
             </div>
             <div class="contactUs">
-                <a href = "mailto: abc@example.com"><i class="material-icons mail">&#xe0be;</i>
-                <span class="contactUs-text"> &nbsp joshans-info@gmail.com </span></a>
+              <a href="mailto: abc@example.com"
+                ><i class="material-icons mail">&#xe0be;</i>
+                <span class="contactUs-text">
+                  &nbsp joshans-info@gmail.com
+                </span></a
+              >
             </div>
+          </div>
         </div>
-
+        <div class="footer" id="rightColumn">
+          <h3>Keep In Touch</h3>
+          <a href="https://www.facebook.com/JoshansCakes" target="_blank"
+            ><i style="font-size: 24px" class="fab fb">&#xf082;</i></a
+          >
+          <a href="https://www.facebook.com/JoshansCakes" target="_blank"
+            ><i style="font-size: 24px" class="fab ig">&#xf16d;</i></a
+          >
+        </div>
+      </div>
+      <div id="deepEnd">
+        Copyright ©
+        <?php echo date("Y");?>
+        Joshan's Cakes & Pastries. All Rights Reserved
+      </div>
     </div>
-    <div class="footer" id="rightColumn">
-        <h3> Keep In Touch </h3>
-            <a href="https://www.facebook.com/JoshansCakes" target="_blank"><i style='font-size:24px' class='fab fb'>&#xf082;</i></a>
-            <a href="https://www.facebook.com/JoshansCakes" target="_blank"><i style='font-size:24px' class='fab ig'>&#xf16d;</i></a>
-    </div>
-
-</div>
-<div id='deepEnd'>
-
-    Copyright ©  <?php echo date("Y");?> Joshan's Cakes & Pastries. All Rights Reserved
-
-</div>
-
-</div>
-
-
-
-</body>
-
-
-
-
+  </body>
 </html>
